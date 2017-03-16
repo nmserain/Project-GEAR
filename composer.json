@@ -1,0 +1,32 @@
+{
+    "name": "nicolas/project-gear",
+    "require-dev": {
+        "symfony/symfony": "^3.2",
+        "javiereguiluz/easyadmin-bundle": "^1.16"
+
+
+    },
+    "authors": [
+        {
+            "name": "nmserain",
+            "email": "n.serain@gmail.com"
+        }
+    ],
+    "require": {
+        "incenteev/composer-parameter-handler": "~2.0"
+
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ]
+    },
+    "extra": {
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        }
+    }
+}
